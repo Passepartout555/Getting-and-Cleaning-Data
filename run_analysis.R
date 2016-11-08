@@ -1,6 +1,7 @@
 # run_analysis.R
 ## Based on Coursera "Getting and Cleaning Data Course" Assignment
 ## Details on where the data comes from and how it is processed: See separate README file
+## Version 2.0
 
 ##########################################################################################
 # Phase 1: Merge training and test sets to create one data set.
@@ -48,7 +49,7 @@ UCI_HAR_DataSetMeansStd <- cbind(PeopleData, ActivitiesData, UCI_HAR_DataSetMean
 ##########################################################################################
 
 # The UCI codebook says: 1 WALKING, 2 WALKING_UPSTAIRS, 3 WALKING_DOWNSTAIRS, 4 SITTING, 5 STANDING, 6 LAYING
-ActivityNames <- c("Walking", "Walking upstairs", "Walking downstairs", "Sitting", "Standing", "Laying")
+ActivityNames <- c("WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING", "LAYING")
 # Data here still in integer, so convert to factors and label according to the UCI convention given
 # UCI_HAR_DataSetMeansStd$ActivitiesData <- factor(UCI_HAR_DataSetMeansStd$ActivitiesData, levels=c(1,2,3,4,5,6), labels = ActivityNames)
 
